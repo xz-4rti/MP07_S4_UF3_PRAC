@@ -1,0 +1,33 @@
+1- Configuracion inicial del projecto
+    -> composer create-project laravel/laravel exercici2
+    -> cd exercici2
+
+2- Crear la migracio
+    -> php artisan make:migration create_usuaris_table
+    - Edita el fichero de migrations (database/migrations/2025_03_25_151705_create_usuaris_table.php)
+    -> php artisan migrate
+
+3- Crea el controlador y las rutas
+    -> php artisan make:controller UsuariController --resource
+    - Definir ruta en routes/web.php
+
+4- Crear form requests
+    -> php artisan make:request StoreUsuariRequest
+    -> php artisan make:request UpdateUsuariRequest
+    - Edita app/Http/Requests/StoreUsuariRequest.php
+    - Edita app/Http/Requests/UpdateUsuariRequest.php
+
+5- Implementar el controlador
+    -> Editar app/Http/Controllers/UsuariController.php
+
+6- Crear les vistas Blade
+    -> mkdir -p resources/views/usuaris
+    - Crea y edita resources/views/usuaris/index.blade.php
+    - Crea y edita resources/views/usuaris/create.blade.php
+    - Crea y edita resources/views/usuaris/show.blade.php
+    - Crea y edita resources/views/layouts/app.blade.php
+
+7- Probar la aplicaion:
+    -> php artisan serve
+    -> http://localhost:8000/usuaris
+    
